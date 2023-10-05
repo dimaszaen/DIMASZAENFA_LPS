@@ -1,0 +1,47 @@
+﻿@model Soal_A.Models.Produk
+@{
+    ViewData["Title"] = "Delete";
+}
+<h2>Delete</h2>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Produk</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nama_barang)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nama_barang)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.kode_barang)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.kode_barang)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.jumlah_barang)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.jumlah_barang)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tanggal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tanggal)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Soal_A.Models.Produk>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nama_barang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kode_barang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.jumlah_barang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tanggal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nama_barang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kode_barang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.jumlah_barang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tanggal)
+                </td>
+                
+                <td>
+                    @Html.ActionLink("Update", "Update", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
